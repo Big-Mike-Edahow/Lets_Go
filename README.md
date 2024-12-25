@@ -1,1 +1,1 @@
-# My versions of the Snippitbox app from the ebook Let's Go! by Alex Edwards
+# My versions of the Snippetbox app from the ebook Let's Go! by Alex Edwards
