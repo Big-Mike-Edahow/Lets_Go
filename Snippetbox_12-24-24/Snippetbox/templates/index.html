@@ -1,0 +1,29 @@
+<!-- index.html -->
+
+{{define "title"}}Home{{end}}
+
+{{define "main"}}
+<h2>Latest Snippets</h2>
+{{ if . }}
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Created</th>
+        <th>Id</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {{ range . }}
+    <tr>
+        <td><a href='/view/{{ .Id }}'>{{ .Title }}</a></td>
+        <td>{{ .Created }}</td>
+        <td>#{{ .Id }}</td>
+        <td><button><a href="/edit/{{ .Id }}">Edit</a></button></td>
+        <td><button><a href="/delete/{{ .Id }}">Delete</a></button></td>
+    </tr>
+    {{end}}
+</table>
+{{else}}
+<p>There's nothing to see here... yet!</p>
+{{end}}
+{{end}}

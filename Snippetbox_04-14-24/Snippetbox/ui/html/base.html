@@ -1,0 +1,30 @@
+<!-- base.html -->
+
+{{define "base"}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' href='../static/img/favicon.ico' type='image/x-icon'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700'>
+    <link href="https://big-mike-edahow.github.io/snippetbox_style.css" type="text/css" rel="stylesheet">
+    <title>{{template "title" .}} - Snippetbox</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href='/'>Snippetbox ✂️</a></h1>
+    </header>
+    {{template "nav" .}}
+    <main>
+        {{template "main" .}}
+    </main>
+    <footer><strong><em>Powered by <a href='https://golang.org/'>Go</a></em></strong> 🚲 in {{.CurrentYear}}</footer>
+    <script src="https://big-mike-edahow.github.io/snippetbox_script.js"></script>
+</body>
+
+</html>
+{{end}}

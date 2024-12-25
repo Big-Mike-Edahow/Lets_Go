@@ -1,0 +1,26 @@
+<!-- create.html -->
+
+{{define "title"}}Create a New Snippet{{end}}
+
+{{define "main"}}
+<form action='/create' method='POST'>
+    <div>
+        {{ with .Errors.Title }}
+        <p class="error">{{ . }}</p>
+        {{ end }}
+        <label>Title:</label>
+        <input type='text' name='title' value="{{ .Title }}">
+    </div>
+    <div>
+        {{ with .Errors.Content }}
+        <p class="error">{{ . }}</p>
+        {{ end }}
+        <label>Content:</label>
+        <textarea name='content'>{{ .Content }}</textarea>
+    </div>
+    <div>
+        <input type='submit' value='Publish snippet'>
+    </div>
+</form>
+{{end}}
+
