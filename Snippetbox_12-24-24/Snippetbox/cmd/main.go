@@ -40,8 +40,8 @@ func main() {
 	http.HandleFunc("/", app.indexHandler)
 	http.HandleFunc("/view/{id}", app.viewHandler)
 	http.HandleFunc("/create", app.createHandler)
-    http.HandleFunc("/edit/{id}", app.editHandler)
-    http.HandleFunc("/delete/{id}", app.deleteHandler)
+    	http.HandleFunc("/edit/{id}", app.editHandler)
+    	http.HandleFunc("/delete/{id}", app.deleteHandler)
 
 	log.Printf("starting server on %s", *addr)
 	log.Fatal(http.ListenAndServe(*addr, logRequest(http.DefaultServeMux)))
