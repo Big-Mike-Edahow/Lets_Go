@@ -1,0 +1,31 @@
+<!-- edit.html -->
+
+{{define "title"}}Edit{{end}}
+
+{{define "content"}}
+
+<section class="content">
+    <h1 class="headline-h1">Edit Snippet ✏️</h1>
+    <br><br>
+   </section>
+    <form method='POST'>
+        <div>
+            {{ with .Errors.Title }}
+            <p class="error">{{ . }}</p>
+            {{ end }}
+            <label>Title:</label>
+            <input type='text' name='title' value="{{ .Title }}">
+        </div>
+        <div>
+            {{ with .Errors.Content }}
+            <p class="error">{{ . }}</p>
+            {{ end }}
+            <label>Content:</label>
+            <textarea name="content" rows="5" cols="45">{{ .Content }}</textarea>
+        </div>
+        <div>
+            <input type='submit' value="Update Snippet">
+        </div>
+    </form>
+
+{{end}}
