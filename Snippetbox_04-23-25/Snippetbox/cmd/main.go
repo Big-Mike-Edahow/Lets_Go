@@ -19,7 +19,7 @@ type application struct {
 
 func main() {
 	addr := flag.String("addr", ":8080", "HTTP network address")
-	dsn := flag.String("dsn", "mike:5454160s@/snippetbox?parseTime=true", "MySQL data source name")
+	dsn := flag.String("dsn", "foo:bar@/snippetbox?parseTime=true", "MySQL data source name")
 	flag.Parse()
 
 	// We pass openDB() the DSN from the command-line flag.
